@@ -10,9 +10,9 @@ public class MovingUpState implements ElevatorState {
     public void handleRequest(Request request) throws InterruptedException {
         if(request.getFloor()>elevator.getCurrentFloor()){
             int distance = request.floor-elevator.getCurrentFloor();
-//            Thread.sleep(distance*1000);
+            Thread.sleep(distance*1000);
             elevator.setCurrentFloor(request.getFloor());
-            System.out.println("Elevator reached to "+elevator.getCurrentFloor()+" "+elevator.getId());
+            System.out.println("Elevator "+elevator.getId()+" reached to floor "+elevator.getCurrentFloor());
             if(elevator.getDestination().isEmpty()){
                 elevator.setElevatorState(new IdleState(elevator));
             }

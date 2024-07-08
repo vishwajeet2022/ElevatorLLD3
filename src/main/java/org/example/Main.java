@@ -21,11 +21,11 @@ public class Main {
         internalButton2.press();
         Button internalButton3 = ButtonFactory.createButton(8,null);
         internalButton3.press();
-        Button internalButton4 = ButtonFactory.createButton(10,null);
-        internalButton4.press();
 
-        Button externalButton1 = ButtonFactory.createButton(6,Direction.DOWN);
+        Button externalButton1 = ButtonFactory.createButton(10,Direction.DOWN);
         externalButton1.press();
+        Button externalButton2 = ButtonFactory.createButton(6,Direction.DOWN);
+        externalButton2.press();
 
 
     }
